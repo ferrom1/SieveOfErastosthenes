@@ -6,10 +6,21 @@ pipeline {
   stages {
     stage ('Initialize') {
       steps {
-	        echo 'Placeholder.'
-       		bat "echo testing"
+	        echo 'Initializing.'
        		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml clean"
       }
     }
+    stage ('Compiling') {
+      steps {
+	        echo 'Compiling.'
+       		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml compile"
+      } 
+  	}
+    stage ('Distribution') {
+      steps {
+	        echo 'Distribution.'
+       		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml dist"
+      } 
+  	}
   }
 }
