@@ -8,7 +8,7 @@ pipeline {
       steps {
 	        echo 'Placeholder.'
        		bat "echo testing"
-       		bat "${antVersion}\bin\ant"
+       		bat "${antVersion}\\bin\\ant"
       }
     }
   }
