@@ -1,14 +1,11 @@
 pipeline {
   agent any
-  def antVersion = 'Ant1.10.8'
+  def antVersion = tool 'Ant1.10.8'
   stages {
     stage ('Initialize') {
       steps {
 	        echo 'Placeholder.'
        		bat "echo testing"
-   			withEnv( ["ANT_HOME=${tool antVersion}"] ) {
-			    bat '$ANT_HOME/bin/ant clean'
-			}
       }
     }
   }
