@@ -8,7 +8,7 @@ pipeline {
       steps {
 	        echo 'Placeholder.'
        		bat "echo testing"
-       		bat "${antVersion}\\bin\\ant Assignment4-Sieve-of-Erastosthenes"
+       		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml clean"
       }
     }
   }
