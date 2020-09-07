@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-//Test2
+//Test3
 public class SieveOfErastosthenes {
 	private ArrayList<Integer> arrayOfPrimes = new ArrayList<Integer>();
 	
