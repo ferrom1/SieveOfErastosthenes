@@ -4,10 +4,16 @@ pipeline {
   }
   agent any
   stages {
+    stage ('Clean') {
+      steps {
+	        echo 'Clean.'
+       		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml clean"
+      }
+    }
     stage ('Initialize') {
       steps {
 	        echo 'Initializing.'
-       		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml clean"
+       		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml init"
       }
     }
     stage ('Compiling') {
@@ -20,6 +26,12 @@ pipeline {
       steps {
 	        echo 'Distribution.'
        		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml dist"
+      } 
+  	}
+    stage ('UnitTests') {
+      steps {
+	        echo 'UnitTests.'
+       		bat "${antVersion}\\bin\\ant -f Assignment4-Sieve-of-Erastosthenes\\build.xml test"
       } 
   	}
   }
