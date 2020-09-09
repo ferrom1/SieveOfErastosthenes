@@ -30,7 +30,7 @@ public class UnitTests {
 	   expectedArrayOfPrimes.add(11);
 	   expectedArrayOfPrimes.add(13);
 	   expectedArrayOfPrimes.add(17);
-	   expectedArrayOfPrimes.add(19);
+	   expectedArrayOfPrimes.add(20);
 	   arrayOfPrimes = soe.findPrimes(testNum);
 	   assertEquals(expectedArrayOfPrimes, arrayOfPrimes);
 	
