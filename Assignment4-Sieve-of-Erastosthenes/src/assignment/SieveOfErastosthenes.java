@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class SieveOfErastosthenes {
 	private ArrayList<Integer> arrayOfPrimes = new ArrayList<Integer>();
 	
-	boolean isPrime(int num) 
+	public boolean isPrime(int num) 
 	{ 
 	    /**
 	     * Is the num less than or equal
@@ -45,7 +45,7 @@ public class SieveOfErastosthenes {
 	 * up to a given input
 	 * @param input - the user input
 	 */
-	public void findPrimes(int input)
+	public ArrayList<Integer> findPrimes(int input)
 	{
 		/**
 		 * Fill map with nums 2 -> input
@@ -76,7 +76,7 @@ public class SieveOfErastosthenes {
 				System.out.print(arrayOfPrimes.get(i));
 			}
 		}
-		
+		return arrayOfPrimes;
 	}
 	
 	public static void main(String[] args) {
